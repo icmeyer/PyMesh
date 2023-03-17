@@ -19,6 +19,7 @@ PYBIND11_ADD_MODULE(PyMesh module.cpp
     PySelfIntersectionResolver.cpp
     PySparseSolver.cpp
     PyTetgen.cpp
+    PyCutter3d.cpp
     PyTetrahedralization.cpp
     PyTriangle.cpp
     PyTriangulation.cpp
@@ -62,6 +63,10 @@ endif()
 
 if (TARGET PyMesh::TetGen)
     target_link_libraries(PyMesh PRIVATE PyMesh::TetGen)
+endif()
+
+if (TARGET PyMesh::3dCutter)
+    target_link_libraries(PyMesh PRIVATE PyMesh::3dCutter)
 endif()
 
 target_include_directories(PyMesh SYSTEM PRIVATE

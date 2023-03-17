@@ -109,6 +109,7 @@ __all__ = [
         "vertex_normals",
         "edge_normals",
         "orient_faces",
+        "cutter3d"
         ]
 __all__ += meshutils.__all__
 __all__ += misc.__all__
