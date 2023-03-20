@@ -12,12 +12,12 @@ class Cutter3d {
         /**
          * Set input
          */
-        void Cutter3d(const MatrixFr& nodes, const MatrixIr& tetrahedra, 
-                      const MatrixFr& surf_nodes, const MatrixIr& triangles):
-                      m_nodes(nodes), m_tets(tetrahedra), m_surf_nodes(surf_nodes),
-                      m_triangles(triangles) {}
+        Cutter3d(const MatrixFr& nodes, const MatrixIr& tetrahedra, 
+                 const MatrixFr& surf_nodes, const MatrixIr& triangles):
+                 m_nodes(nodes), m_tets(tetrahedra), m_surf_nodes(surf_nodes),
+                 m_triangles(triangles) {}
         const MatrixFr& get_nodes() const { return m_nodes; }
-        const MatrixIr& get_tetrahedra() const { return m_tetrahedra; }
+        const MatrixIr& get_tetrahedra() const { return m_tets; }
         const MatrixFr& get_surf_nodes() const { return m_surf_nodes; }
         const MatrixIr& get_triangles() const { return m_triangles; }
 
@@ -36,8 +36,8 @@ class Cutter3d {
     private:
         // inputs
         MatrixFr m_nodes;
-        MatrixIr m_tetrahedra;
-        MatrixIr m_surf_nodes;
+        MatrixIr m_tets;
+        MatrixFr m_surf_nodes;
         VectorI m_triangles;
 
         // outputs
@@ -47,5 +47,3 @@ class Cutter3d {
 };
 
 }
-
-#endif

@@ -2,7 +2,7 @@ from PyMesh import Cutter3d
 
 from .meshio import form_mesh
 
-def cut_mesh(mesh, surface):
+def cut_tet_mesh(mesh, surface):
     """ Wrapper function of :class:`Cutter3d`
     Args:
         mesh (:class:`Mesh`): Mesh to be cut

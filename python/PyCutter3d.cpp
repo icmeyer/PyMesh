@@ -12,7 +12,7 @@ void init_Cutter3d(py::module& m) {
     using namespace PyMesh;
     py::class_<Cutter3d, std::shared_ptr<Cutter3d> > cutter3d(m, "cutter3d");
     cutter3d 
-        .def(py::init<>())
+        .def(py::init<const MatrixFr&, const MatrixIr&, const MatrixFr&, const VectorI&>())
         // .def_property("nodes",
         //         &Cutter3d::get_nodes,
         //         // &Cutter3d::set_vertices,
@@ -27,10 +27,6 @@ void init_Cutter3d(py::module& m) {
         .def_property_readonly("surf_nodes",
                 &Cutter3d::get_surf_nodes,
                 py::return_value_policy::reference_internal)
-        .def_property("triangles",
-                &Cutter3d::get_triangles,
-                py::return_value_policy::reference_internal)
-        .def("Cutter3d", &TetgenWrapper::Cutter3d)
-        .def("run", &TetgenWrapper::run)
+        .def("run", &Cutter3d::run)
         ;
 }

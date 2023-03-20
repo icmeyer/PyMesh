@@ -65,8 +65,8 @@ if (TARGET PyMesh::TetGen)
     target_link_libraries(PyMesh PRIVATE PyMesh::TetGen)
 endif()
 
-if (TARGET PyMesh::3dCutter)
-    target_link_libraries(PyMesh PRIVATE PyMesh::3dCutter)
+if (TARGET PyMesh::Cutter3d)
+    target_link_libraries(PyMesh PRIVATE PyMesh::Cutter3d)
 endif()
 
 target_include_directories(PyMesh SYSTEM PRIVATE
