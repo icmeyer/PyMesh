@@ -1,4 +1,6 @@
 #!/bin/bash
+# helpful command: git submodule update --init
+# helpful command: git submodule update --init --recursive
 rm -rf build
 mkdir build
 cd build
