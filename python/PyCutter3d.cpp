@@ -7,6 +7,8 @@
 #include <Cutter3d/Cutter3d.h>
 
 namespace py = pybind11;
+using namespace PyMesh;
+using namespace pybind11::literals;
 
 void init_Cutter3d(py::module& m) {
     using namespace PyMesh;

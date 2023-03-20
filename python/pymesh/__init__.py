@@ -50,6 +50,7 @@ from .SparseSolver import SparseSolver
 from .straight_skeleton import straight_skeleton
 from .igl_utils import unique_rows
 from .igl_utils import face_normals, vertex_normals, edge_normals, orient_faces
+from .cut_tet_mesh import cut_tet_mesh
 
 from .map_attributes import map_vertex_attribute
 from .map_attributes import map_face_attribute
