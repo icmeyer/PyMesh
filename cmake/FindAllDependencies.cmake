@@ -72,6 +72,11 @@ if (NOT TRIANGLE_FOUND)
     find_package(Triangle QUIET)
 endif (NOT TRIANGLE_FOUND)
 
+# Cutter3d
+if (NOT CUTTER3D_FOUND)
+    find_package(CUTTER3D QUIET)
+endif (NOT CUTTER3D_FOUND)
+
 # Tetgen
 if (NOT TETGEN_FOUND)
     find_package(Tetgen QUIET)

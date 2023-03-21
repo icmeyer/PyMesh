@@ -42,6 +42,7 @@ option(PYMESH_USE_TETGEN     "Enable TetGen support"     ${TETGEN_FOUND})
 option(PYMESH_USE_TETWILD    "Enable TetWild support"    ${TETWILD_FOUND})
 option(PYMESH_USE_TINYXML2   "Enable TinyXML2 support"   ${TINYXML2_FOUND})
 option(PYMESH_USE_TRIANGLE   "Enable Triangle support"   ${TRIANGLE_FOUND})
+option(PYMESH_USE_CUTTER3D   "Enable Cutter3d support"   ${CUTTER3D_FOUND})
 option(PYMESH_USE_UMFPACK    "Enable Umfpack support"    ${UMFPACK_FOUND})
 option(PYMESH_USE_SPARSEHASH "Enable SparseHash support" ${SPARSEHASH_FOUND})
 option(PYMESH_USE_FastWindingNumber "Enable Fast Winding Number support"

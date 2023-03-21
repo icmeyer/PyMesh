@@ -1,8 +1,6 @@
 /* This file is part of PyMesh. Copyright (c) 2015 by Qingnan Zhou */
 /* Author of this file: Isaac Meyer */
 #pragma once
-#include <Cutting.h>
-
 #include <Core/EigenTypedef.h>
 
 namespace PyMesh {

@@ -113,6 +113,16 @@ if (TRIANGLE_FOUND AND PYMESH_USE_TRIANGLE AND NOT TARGET PyMesh::third_party::T
         INTERFACE -DWITH_TRIANGLE)
 endif ()
 
+if (CUTTER3D_FOUND AND PYMESH_USE_CUTTER3D AND NOT TARGET PyMesh::third_party::Cutter3d)
+    add_library(PyMesh::third_party::Cutter3d INTERFACE IMPORTED)
+    target_include_directories(PyMesh::third_party::Cutter3d SYSTEM
+        INTERFACE ${CUTTER3D_INCLUDE_DIRS})
+    target_link_libraries(PyMesh::third_party::Cutter3d
+        INTERFACE ${CUTTER3D_LIBRARIES})
+    target_compile_definitions(PyMesh::third_party::Cutter3d
+        INTERFACE -DWITH_CUTTER3D)
+endif ()
+
 
 if (TETGEN_FOUND AND PYMESH_USE_TETGEN AND NOT PyMesh::third_party::TetGen)
     add_library(PyMesh::third_party::TetGen INTERFACE IMPORTED)

@@ -1,6 +1,6 @@
 # Enumerate source files
-file(GLOB_RECURSE SRC_FILES *.cpp)
-file(GLOB_RECURSE INC_FILES *.h)
+set(SRC_FILES Cutter3d.cpp)
+set(INC_FILES Cutter3d.h)
 
 if (TARGET PyMesh::third_party::Cutter3d)
     add_library(lib_Cutter3d SHARED ${SRC_FILES} ${INC_FILES})
