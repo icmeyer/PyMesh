@@ -212,6 +212,16 @@ Mesh::Ptr VoxelGrid<DIM>::get_voxel_mesh() {
 }
 
 template<int DIM>
+VectorI VoxelGrid<DIM>::get_voxel_vector() {
+    VectorI voxels(this->size().prod());
+    for (auto itr=this->begin(); itr!=this->end(); itr++) {
+        size_t i = itr - this->begin();
+        voxels[i] = *itr;
+    }
+    return voxels;
+}
+
+template<int DIM>
 void VoxelGrid<DIM>::remove_cavities() {
     Mask mask = create_mask();
 

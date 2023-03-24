@@ -27,6 +27,21 @@ class VoxelGrid:
     def remove_cavities(self):
         self.raw_grid.remove_cavities()
 
+    def get_voxel_vector(self):
+        return self.raw_grid.get_voxel_vector()
+
+    @property
+    def size(self):
+        return self.raw_grid.size
+
+    @property
+    def base_coordinates(self):
+        return self.raw_grid.base_coordinates
+
+    @property
+    def cell_size(self):
+        return self.raw_grid.cell_size
+
     @property
     def mesh(self):
         return Mesh(self.raw_grid.get_voxel_mesh())

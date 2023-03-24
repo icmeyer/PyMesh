@@ -28,8 +28,15 @@ class VoxelGrid : public Grid<DIM, short>{
         void create_grid();
         void erode(size_t iterations);
         void dilate(size_t iterations);
-        Mesh::Ptr get_voxel_mesh();
         void remove_cavities();
+
+        const Vector_i& get_size() const { return this->size(); }
+        const Vector_f& get_base_coordinates() const { return this->base_coordinates(); }
+        const Vector_f& get_cell_size() const { return this->cell_size(); }
+
+        Mesh::Ptr get_voxel_mesh();
+        VectorI get_voxel_vector();
+
 
     protected:
         typedef Grid<DIM, bool> Mask;
